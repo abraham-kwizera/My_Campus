@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C8EFF4"
+    tools:context=".SignupActivity">
+
+    <EditText
+        android:id="@+id/PersonName"
+        android:layout_width="294dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="@string/full_name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="181dp"
+        />
+
+    <EditText
+        android:id="@+id/ConfirmRegNo"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="@string/confirm_registration_number"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <EditText
+        android:id="@+id/RegNo"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Registration Number"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword2"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="419dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="374dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="219dp"
+        android:layout_height="47dp"
+        android:text="Sign up"
+        app:backgroundTint="#009688"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="492dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="220dp"
+        android:layout_height="26dp"
+        android:text="Did you create an account before?"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="548dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="55dp"
+        android:layout_height="27dp"
+        android:text="Sign In"
+        android:textColor="#009688"
+        tools:layout_editor_absoluteX="292dp"
+        tools:layout_editor_absoluteY="548dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="145dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@id/PersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/user" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="111dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
