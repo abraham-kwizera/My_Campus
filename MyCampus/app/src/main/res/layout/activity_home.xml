@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,11 +9,11 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="381dp"
-        android:layout_height="172dp"
+        android:layout_width="352dp"
+        android:layout_height="174dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,59 +23,71 @@
 
     <TextView
         android:id="@+id/homepage"
-        android:layout_width="166dp"
-        android:layout_height="116dp"
+        android:layout_width="177dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="Homepage"
         android:textColor="#009688"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintEnd_toStartOf="@+id/marks"
+        app:layout_constraintHorizontal_bias="0.779"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/marks"
-        android:layout_width="166dp"
-        android:layout_height="116dp"
+        android:layout_width="181dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:gravity="center"
         android:text="Marks"
         android:textColor="#009688"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/properties"
-        android:layout_width="166dp"
-        android:layout_height="116dp"
+        android:layout_width="181dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         android:gravity="center"
         android:text="properties"
         android:textColor="#009688"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.668" />
+        app:layout_constraintTop_toBottomOf="@+id/marks" />
 
     <TextView
         android:id="@+id/chat"
-        android:layout_width="166dp"
-        android:layout_height="116dp"
+        android:layout_width="167dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="Chat"
         android:textColor="#009688"
+        app:layout_constraintEnd_toStartOf="@+id/properties"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepage" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/help"
+        android:src="@drawable/help"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.668" />
+        app:layout_constraintTop_toBottomOf="@+id/properties"
+        app:layout_constraintVertical_bias="0.337" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,14 +31,14 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/PersonName"
+        android:id="@+id/FullName"
         android:layout_width="294dp"
         android:layout_height="40dp"
         android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="@string/full_name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@id/editTextTextEmailAddress"
+        app:layout_constraintBottom_toTopOf="@id/Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
         android:ems="10"
         android:hint="@string/confirm_registration_number"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintBottom_toTopOf="@+id/Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent" />
@@ -73,7 +73,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/Email"
         android:layout_width="300dp"
         android:layout_height="44dp"
         android:layout_marginBottom="8dp"
@@ -86,20 +86,20 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/Password"
         android:layout_width="288dp"
         android:layout_height="40dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@id/editTextTextPassword2"
+        app:layout_constraintBottom_toTopOf="@id/ConfirmPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteX="61dp"
         tools:layout_editor_absoluteY="374dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/SignUp"
         android:layout_width="219dp"
         android:layout_height="47dp"
         android:layout_marginTop="24dp"
@@ -107,7 +107,7 @@
         app:backgroundTint="#009688"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmPassword" />
 
     <TextView
         android:id="@+id/textView2"
@@ -137,7 +137,7 @@
         app:layout_constraintTop_toTopOf="@+id/button" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/ConfirmPassword"
         android:layout_width="288dp"
         android:layout_height="40dp"
         android:ems="10"
@@ -145,7 +145,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@id/Password"
         tools:layout_editor_absoluteX="61dp"
         tools:layout_editor_absoluteY="419dp" />
 
@@ -157,6 +157,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="4dp" />
+        tools:layout_editor_absoluteY="4dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
