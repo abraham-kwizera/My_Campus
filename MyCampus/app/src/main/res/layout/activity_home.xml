@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@+id/imageView5"
+        android:clickable="true"
         android:layout_width="352dp"
         android:layout_height="174dp"
         android:layout_marginStart="16dp"
@@ -43,6 +44,7 @@
         android:layout_marginRight="16dp"
         android:gravity="center"
         android:text="Marks"
+        android:clickable="true"
         android:textColor="#009688"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
