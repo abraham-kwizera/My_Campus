@@ -33,13 +33,13 @@
         android:gravity="center_horizontal" />
 
     <EditText
-        android:id="@+id/UserName"
+        android:id="@+id/Email"
         android:layout_width="211dp"
         android:layout_height="39dp"
         android:layout_marginTop="60dp"
         android:ems="10"
-        android:hint="@string/user_name"
-        android:inputType="textPersonName"
+        android:hint="Email address"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/UserName" />
+        app:layout_constraintTop_toBottomOf="@id/Email" />
 
     <Button
         android:id="@+id/Login"
@@ -63,6 +63,7 @@
         android:layout_height="38dp"
         android:layout_marginTop="32dp"
         android:text="Login"
+        android:clickable="true"
         app:backgroundTint="#009688"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
