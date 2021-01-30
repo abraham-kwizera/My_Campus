@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth Fauth;
     ProgressBar progressBar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,40 +55,65 @@ public class LoginActivity extends AppCompatActivity {
             currentUser.reload();
         }
 
+        //Link to signup page before login in
+        sign_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
+            }
+        });
+
         //Log in activity
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String UserEmail = Email.getText().toString().trim();
-                String UserPassword = Password.getText().toString().trim();
-
-                //Checking if fields are empty
-                if (TextUtils.isEmpty(UserEmail)) {
-                    Toast.makeText(getApplicationContext(), "Enter Your Email!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(UserPassword)) {
-                    Toast.makeText(getApplicationContext(), "Enter Your Password!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                //Login activity using email and password
-                Fauth.startActivityForSignInWithProvider(this, new Build()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                    @Override
-                    public void onSuccess(AuthResult authResult) {
-
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-
-                    }
-                });
-
-
+                Validation();
+                login();
             }
-        });
+            });
+            }
 
+    private void Validation() {
+
+        String UserEmail = Email.getText().toString();
+        String UserPassword = Password.getText().toString();
+
+        //Checking if fields are empty
+        if (TextUtils.isEmpty(UserEmail)) {
+            Toast.makeText(getApplicationContext(), "Enter Your Email!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (TextUtils.isEmpty(UserPassword)) {
+            Toast.makeText(getApplicationContext(), "Enter Your Password!", Toast.LENGTH_SHORT).show();
+            return;
+        }
     }
 
+    //Login activity using email and password
+    private void login() {
+        String UserEmail = Email.getText().toString();
+        String UserPassword = Password.getText().toString();
+        Fauth.signInWithEmailAndPassword(UserEmail, UserPassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                } else {
+                    //if sign in fails
+                    Toast.makeText(LoginActivity.this, "Authenthication failed, Try Again ...", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+
+        });
+    }
+
+
+
 }
+
+
+
